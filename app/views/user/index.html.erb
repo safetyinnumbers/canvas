@@ -41,7 +41,7 @@
               <%end%>
             </div>
             <div class=" large-3 columns">
-              <a href="#"  class="button  expand medium"><span>Score: <%= user.get_cred %></span> </a>
+              <a href="#"  class="button  expand medium"><span>Score: <%= user.get_cred.round(2) %></span> </a>
             </div>
             <div class="row">
 	      
@@ -96,7 +96,7 @@
                 <%= "#{ut.comments.flagged.size} flagged" %><br />
             </div>
             <div class=" large-3 columns">
-              <a href="#"  class="button  expand medium"><span>Score: <%= ut.get_cred %></span> </a>
+              <a href="#"  class="button  expand medium"><span>Score: <%= ut.get_cred.round(2) %></span> </a>
             </div>
             <div class="row">
 	      

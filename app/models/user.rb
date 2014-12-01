@@ -30,9 +30,9 @@ class User < ActiveRecord::Base
       end
     end
     if (total_pts > 0)
-      (positive_pts / total_pts) * (1.0 / (self.comment_flags.distinct.count(:comment_id) + 1.0))
+      (positive_pts / total_pts) * (1.0 / (self.flags.distinct.count + 1.0))
     else
-      (0.5) * (1.0 / (self.flags.distinct.count(:comment_id) + 1.0))
+      (0.5) * (1.0 / (self.flags.distinct.count + 1.0))
     end
   end
 
